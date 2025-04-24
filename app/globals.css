@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light theme */
+:root {
+  --bg-color: #fdfdfd;
+  --text-color: #111827;
+  --header-color: #111827;
+  --header-light-color: #F9FAFB;
+  --skills-color: #36566a;
+  --shadow-color: grey;
+  --dropheader-color: rgb(219, 234, 254);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-color: #181818;
+  --text-color: #ffffff;
+  --skills-color: #242323;
+  --header-color: #e2e8f0;
+  --shadow-color: black;
+  --dropheader-color: #36566a;
+}
+
+/* Apply the variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+.main{
+  min-height: screen;
+}
+.hero {
+  display: flex;
+  flex: column;
+  justify-content: center;
+  text-align: left;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 30px;
+}
+
+.pic{
+  position: relative;
+  border-radius: 50%;
+  margin-left: 220px;
+  z-index: 5;
+}
+ 
+.skillsGrid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    grid-auto-rows: auto;
+    height: auto;
+}
+.skillsGrid img {
+  height: 145px;
+  width: 150px;
+  gap:20px;
+}
+.skills{
+  display: flex;
+  background-color: var(--skills-color);
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+
+  box-shadow: 1px 1px 10px 1px var(--shadow-color);;
+}
+
+.experience{
+  background-color: var(--skills-color);
+  box-shadow: 1px 1px 10px 1px var(--shadow-color);
+  color: rgb(185, 185, 185);
+}
+
+.section {
+  padding-top: 2rem; 
+  padding-bottom: 2rem; 
+}
+
+.header {
+  font-size: 2.75rem; 
+  font-weight: 700; 
+  margin-bottom: 1rem; 
+  color: var(--header-color);
+}
+.header-light {
+  font-size: 2.75rem; 
+  font-weight: 700; 
+  margin-bottom: 1rem; 
+  color: var(--header-light-color);
+}
+.headerdrop {
+  background-color: var(--dropheader-color);
+}
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.theme-toggle:hover {
+  color: var(--subheader-color);
+}
