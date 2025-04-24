@@ -5,7 +5,6 @@ import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 import Experience from './components/experience';
 import Banner from "@/app/components/banner";
-import Folder from '@/app/components/folder';
 import Projects from "@/app/components/projects";
 import Skills from "@/app/components/skills";
 
@@ -22,7 +21,6 @@ export default function Home() {
       <div className="main">
         <Header />
         <main>
-
             <section id="top">
               <Banner />
             </section>
