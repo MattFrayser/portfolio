@@ -65,10 +65,10 @@ export default function Banner() {
         </motion.div>
 
         <div className="flex gap-6 my-6">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/mattfrayser" target="_blank" rel="noopener noreferrer">
             <FaGithub size={34} className="hover:text-gray-400 transition-colors" />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/matthew-frayser" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={34} className="hover:text-gray-400 transition-colors" />
           </a>
         </div>

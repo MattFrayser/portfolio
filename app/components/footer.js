@@ -8,10 +8,10 @@ export default function Footer() {
         <div className="text-center">
           <h4 className="text-xl font-bold mb-4">Let's Connect</h4>
           <div className="flex justify-center gap-6 mb-6">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/mattfrayser" target="_blank" rel="noopener noreferrer">
               <FaGithub size={24} className="hover:text-gray-400" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/matthew-frayser/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin size={24} className="hover:text-gray-400" />
             </a>
           </div>
