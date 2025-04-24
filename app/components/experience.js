@@ -9,9 +9,6 @@ export default function Experience() {
       
       <div className="relative px-10">
 
-      {/* Line */}
-      <div className="absolute left-[70] top-10 bottom-20 w-0.5 bg-gray-500 transform -translate-x-1/2"></div>
-
       {/* Experience 1 */}
 
       <div className="flex py-4 gap-4 mb-6 pb-6 relative">
