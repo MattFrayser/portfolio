@@ -93,7 +93,7 @@ export default function Banner() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
       >
-        <div className="relative w-54 h-54 sm:w-80 sm:h-80 md:w-96 md:h-96">
+        <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
           <Image
             src="/profile2.png"
             alt="Matt Frayser"
