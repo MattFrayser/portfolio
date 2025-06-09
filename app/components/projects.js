@@ -12,6 +12,7 @@ export default function ProjectsPreview() {
       .then(csvText => {
         Papa.parse(csvText, {
           header: true,
+          skipEmptyLines: true,
           complete: (results) => {
             setProjects(results.data);
           }
@@ -35,7 +36,7 @@ export default function ProjectsPreview() {
           {projects.map((project, index) => (
             <a href={project.link} target="_blank" rel="noopener noreferrer" key={index} className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-2xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
               <div className="justify-center items-center flex flex-col">
-                <img src={project.img} alt={project.title} className="rounded-md mt-2 mb-1 h-14 w-14" />
+                <img src={project.img} alt={project.title} className="rounded-md mt-2 mb-1 h-15 w-24" />
                 <div className="mt-2">
                   <span className="text-2xl lg:text-3xl font-extrabold text-gray-900">
                     {project.title}
