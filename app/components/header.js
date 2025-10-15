@@ -61,8 +61,8 @@ export default function Header() {
 
   return (
     <>
-      {/* Your original header - stays in place */}
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center justify-between py-4">
           <div className="flex items-center space-x-6">
@@ -75,17 +75,17 @@ export default function Header() {
             <div className="flex space-x-6">
               <a onClick={() => scrollToSection("projects")} className="relative group animate__animated animate__fadeInDown delay1 text-2xl xl:text-3xl cursor-pointer font-extrabold px-2 py-1 overflow-hidden">
                 <span className="relative z-10">Projects</span>
-                <span className="absolute bottom-1 left-0 w-full h-2 bg-blue-200 transition-all duration-300 ease-out origin-bottom transform scale-y-[.5] group-hover:scale-y-[3]"></span>
+                <span className="absolute bottom-1 left-0 w-full h-2 bg-blue-200 transition-all duration-300 ease-out origin-bottom transform scale-y-[.5] group-hover:scale-y-[4.5]"></span>
               </a>
               
               <a onClick={() => scrollToSection("experience")} className="relative group animate__animated animate__fadeInDown kill-link-style delay2 text-2xl xl:text-3xl cursor-pointer font-extrabold px-2 py-1 overflow-hidden">
-                <span className="relative z-10">Experience</span>
-                <span className="absolute bottom-1 left-0 w-full h-2 bg-blue-200 transition-all duration-300 ease-out origin-bottom transform scale-y-[.5] group-hover:scale-y-[3]"></span>
+                <span className="relative z-10">Certifications</span>
+                <span className="absolute bottom-1 left-0 w-full h-2 bg-blue-200 transition-all duration-300 ease-out origin-bottom transform scale-y-[.5] group-hover:scale-y-[4.5]"></span>
               </a>
               
               <div onClick={handleContact} className="relative group animate__animated animate__fadeInDown kill-link-style delay3 text-2xl xl:text-3xl cursor-pointer font-extrabold px-2 py-1 overflow-hidden">
                 <span className="relative z-10">Contact Me</span>
-                <span className="absolute bottom-1 left-0 w-full h-2 bg-blue-200 transition-all duration-300 ease-out origin-bottom transform scale-y-[.5] group-hover:scale-y-[3]"></span>
+                <span className="absolute bottom-1 left-0 w-full h-2 bg-blue-200 transition-all duration-300 ease-out origin-bottom transform scale-y-[.5] group-hover:scale-y-[4.5]"></span>
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function Header() {
         </nav>
       </div>
 
-      {/* header that drops down on scroll */}
+      {/* Dropdown */}
       <div className={`headerdrop fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${showDropHeader ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="hidden md:flex items-center justify-between py-4">
@@ -123,7 +123,7 @@ export default function Header() {
                   className="relative group text-2xl xl:text-3xl cursor-pointer font-extrabold px-2 py-1 overflow-hidden text-gray-900"
                 >
                   <span className="relative z-10">Projects</span>
-                  <span className="absolute bottom-1 left-0 w-full h-2 bg-blue-300 transition-all duration-300 ease-out origin-bottom transform scale-y-[.5] group-hover:scale-y-[3]"></span>
+                  <span className="absolute bottom-1 left-0 w-full h-2 bg-blue-300 transition-all duration-300 ease-out origin-bottom transform scale-y-[.5] group-hover:scale-y-[4.5]"></span>
                 </button>
                 
                 <button 
@@ -131,7 +131,7 @@ export default function Header() {
                   className="relative group text-2xl xl:text-3xl cursor-pointer font-extrabold px-2 py-1 overflow-hidden text-gray-900"
                 >
                   <span className="relative z-10">Experience</span>
-                  <span className="absolute bottom-1 left-0 w-full h-2 bg-blue-300 transition-all duration-300 ease-out origin-bottom transform scale-y-[.5] group-hover:scale-y-[3]"></span>
+                  <span className="absolute bottom-1 left-0 w-full h-2 bg-blue-300 transition-all duration-300 ease-out origin-bottom transform scale-y-[.5] group-hover:scale-y-[4.5]"></span>
                 </button>
                 
                 <button 
@@ -139,7 +139,7 @@ export default function Header() {
                   className="relative group text-2xl xl:text-3xl cursor-pointer font-extrabold px-2 py-1 overflow-hidden text-gray-900"
                 >
                   <span className="relative z-10">Contact Me</span>
-                  <span className="absolute bottom-1 left-0 w-full h-2 bg-blue-300 transition-all duration-300 ease-out origin-bottom transform scale-y-[.5] group-hover:scale-y-[3]"></span>
+                  <span className="absolute bottom-1 left-0 w-full h-2 bg-blue-300 transition-all duration-300 ease-out origin-bottom transform scale-y-[.5] group-hover:scale-y-[4.5]"></span>
                 </button>
               </div>
             </div>

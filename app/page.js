@@ -3,10 +3,9 @@ import React from 'react';
 import { useState } from 'react';
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
-import Experience from './components/experience';
 import Banner from "@/app/components/banner";
 import Projects from "@/app/components/projects";
-import Skills from "@/app/components/skills";
+import Certifications from "@/app/components/certifications";
 
 
 export default function Home() {
@@ -25,15 +24,14 @@ export default function Home() {
               <Banner />
             </section>
 
-            <Skills />
-
             <section id="projects">
               <Projects />
             </section>
 
-            <section id="experience">
-              <Experience />
+            <section id="Certifications">
+                <Certifications />
             </section>
+
                 
 
         </main>

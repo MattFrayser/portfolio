@@ -1,54 +1,92 @@
-"use client"
-import React, { useEffect, useState } from 'react';
-import Papa from 'papaparse';
-
 export default function ProjectsPreview() {
-  const [projects, setProjects] = useState([]);
+
+    const projects = [
+    {
+        title: "• Codr",
+        description: "Online code execution platform for multiple languages.",
+        img: "/Codr.png",
+        link: "https://codr-sandbox.vercel.app/"
+    },
+    {
+        title: "• Collaborative Whiteboard",
+        description: "Anonymous room room based whiteboard.",
+        img: "/whiteboard.png",
+        link: "https://mattfrayser.github.io/math-visualizer/"
+    },
+    {
+        title: "• Spotify Go API",
+        description: "Go package for using spotify api.",
+        img: "/spotifyGo.png",
+        link: "https://github.com/MattFrayser/spotifyAPI"
+    },
+    {
+        title: "• YouTube History Statistics",
+        description: "Statics from youtube history through Google Takeout.",
+        img: "/ytStats.png",
+        link: "https://youtube-history-statistics.vercel.app/"
+    },
+    {
+        title: "• Local Cloud",
+        description: "Learning tool for visualization and management of docker containers.",
+        img: "/localCloud.png",
+        link: "https://github.com/MattFrayser/localcloud"
+    },
+    {
+        title: "• Math Visualizer",
+        description: "Visualize complex math problems with custom inputs.",
+        img: "/math.png",
+        link: "https://mattfrayser.github.io/math-visualizer/"
+    },
+    {
+        title: "• Calling Card",
+        description: "Interactive business cards. Discover more about me by solving puzzles.",
+        img: "/callingCards.png",
+        link: "https://editor.p5js.org/MattFrayser/full/rS4tq2JQu"
+    },
+    {
+        title: "• AGIE",
+        description: "VCU Captstone project. Database to increate diversity in STEMM fields.",
+        img: "/AGIE.png",
+        link: "https://github.com/VCU-CS-Capstone/CS-24-333-Developing-a-central-hub-for-gender-outcome-programs-in-STEMM"
+    },
+    ];
+
   
-  useEffect(() => {
-    // Fetch and parse the CSV file
-    fetch('/projects.csv')
-      .then(response => response.text())
-      .then(csvText => {
-        Papa.parse(csvText, {
-          header: true,
-          skipEmptyLines: true,
-          complete: (results) => {
-            setProjects(results.data);
-          }
-        });
-      });
-  }, []);
-  
 
-  return (
-
-    <div className="flex justify-center mb-6">
-      <div className="max-auto w-full px-20">
-
-      <div className="header py-10">
-                My Projects
-        <div className="text-3xl">
-        I love to create and build things. Here are some of my projects that I have worked on. I am always looking to learn and grow, so if you have any suggestions or feedback, feel free to reach out!
-        </div>
-      </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    return (
+    <section id="projects" className="projects">
+      <div className="container">
+        <h2 style={{ color: '#fdfdfd', fontWeight: '700' }}>My Projects</h2>
+        <div className="projects-grid">
           {projects.map((project, index) => (
-            <a href={project.link} target="_blank" rel="noopener noreferrer" key={index} className="cursor-pointer text-center bg-gradient-to-r from-white to-gray-100 duration-200 ease move-up-slightly hover:shadow-2xl shadow-md p-4 w-full h-auto border-4 text-gray-900 border-gray-900 rounded-lg">
-              <div className="justify-center items-center flex flex-col">
-                <img src={project.img} alt={project.title} className="rounded-md mt-2 mb-1 h-15 w-24" />
-                <div className="mt-2">
-                  <span className="text-2xl lg:text-3xl font-extrabold text-gray-900">
-                    {project.title}
-                  </span>
-                  <div className="mt-1 text-gray-600 font-extrabold text-xl lg:text-2xl">{project.description}</div>
+            <div key={index} className="project-item">
+              <a
+                href={project.link || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-card"
+              >
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  onError={(e) => e.target.src = 'images/placeholder.jpg'}
+                />
+                <div className="project-card-circle">
+                  <svg className="project-card-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                 </div>
+              </a>
+              <div className="project-desc">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
+    );
+}       
 
-  );
-}
+

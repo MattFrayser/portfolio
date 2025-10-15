@@ -1,13 +1,16 @@
-import { Inter, Roboto_Mono } from 'next/font/google';
+import { Nunito, Lora } from 'next/font/google';
 import './globals.css';
-const inter = Inter({
-  variable: '--font-inter',
+
+const nunito = Nunito({
+  variable: '--font-nunito',
   subsets: ['latin'],
+  weight: ['300', '400', '600', '700'],
 });
 
-const robotoMono = Roboto_Mono({
-  variable: '--font-roboto-mono',
+const lora = Lora({
+  variable: '--font-lora',
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata = {
@@ -21,8 +24,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${robotoMono.variable} antialiased`}>
-        
+      <body className={`${nunito.variable} ${lora.variable} antialiased`}>
+
         {children}
       </body>
     </html>

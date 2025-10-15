@@ -11,7 +11,7 @@ export default function Banner() {
       {/* Text Content - appears second on mobile, first on desktop */}
       <div className="order-2 lg:order-1 w-full lg:w-1/2">
         <motion.div
-          className="text-3xl sm:text-3xl md:text-4xl font-bold"
+          className="text-3xl sm:text-3xl md:text-4xl font-weight-525"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
@@ -30,7 +30,7 @@ export default function Banner() {
           </motion.div>
           <div className="relative">
             <motion.div
-              className="bg-blue-200 absolute bottom-3 h-4 md:h-5 w-full opacity-50"
+              className="bg-blue-200 absolute bottom-5 h-3 md:h-5 w-full opacity-50"
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 1, delay: 2, ease: "easeInOut" }}
@@ -73,17 +73,15 @@ export default function Banner() {
           </a>
         </div>
 
-        <motion.p
-          className="text-md py-4 font-bold md:text-xl max-w-lg"
+        <motion.div
+          className="text-md font-bold md:text-xl max-w-lg space-y-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
-         As a kid, I would take any electronic device apart to see how it worked. That curiosity for how things work has transformed into delivering software solutions from the ground up, focusing on scalability. 
-         Today, I’m a Computer Science graduate from Virginia Commonwealth University with a passion for turning complex ideas into functional systems. I thrive on building solutions that are as robust as they are user-centric.
-
-
-        </motion.p>
+          <p>As a kid, I took apart every device I could get my hands on to customize it.</p>
+          <p>I still do, just with codebases and production systems (and actual permission now).</p>
+        </motion.div>
       </div>
 
       {/* Image - appears first on mobile, second on desktop */}
@@ -95,7 +93,7 @@ export default function Banner() {
       >
         <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
           <Image
-            src="/profile2.png"
+            src="/profile.jpg"
             alt="Matt Frayser"
             fill
             className="rounded-full border-4 border-gray-900 object-cover"
