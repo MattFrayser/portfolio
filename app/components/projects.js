@@ -11,7 +11,7 @@ export default function ProjectsPreview() {
         title: "• Collaborative Whiteboard",
         description: "Anonymous room room based whiteboard.",
         img: "/whiteboard.png",
-        link: "https://mattfrayser.github.io/math-visualizer/"
+        link: "https://github.com/MattFrayser/whiteboard"
     },
     {
         title: "• Spotify Go API",
