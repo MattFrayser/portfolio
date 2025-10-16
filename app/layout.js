@@ -16,9 +16,9 @@ const lora = Lora({
 export const metadata = {
   title: 'Matthew Frayser Portfolio',
   icons: {
-    icon: '/portfolio.png',
+    icon: '/icon.png',
   },
-  description: 'A portfolio showcasing my work and skills as a software engineer.',
+  description: "A portfolio showcasing Matthew Frayser's work and skills as a software engineer.",
 };
 
 export default function RootLayout({ children }) {
