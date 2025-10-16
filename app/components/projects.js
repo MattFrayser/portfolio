@@ -4,7 +4,7 @@ export default function ProjectsPreview() {
     {
         title: "• Codr",
         description: "Online code execution platform for multiple languages.",
-        img: "/Codr.png",
+        img: "/codr.png",
         link: "https://codr-sandbox.vercel.app/"
     },
     {
