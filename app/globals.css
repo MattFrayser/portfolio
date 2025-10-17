@@ -108,6 +108,11 @@ h1, h2, h3{
     padding: 3rem;
 }
 
+.projects .container {
+    max-width: 100%;
+    padding: 0;
+}
+
 .projects h2 {
     font-size: 3rem;
     text-align: center;
@@ -117,9 +122,23 @@ h1, h2, h3{
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
     grid-auto-rows: 525px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .project-item {
@@ -182,14 +201,14 @@ h1, h2, h3{
 }
 
 .project-desc h3 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     color: #A1A1A1;
     margin: 0 0 0 .5rem;
 }
 
 .project-desc p {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
     margin: 0;
     margin-top: 0.25rem;
@@ -199,8 +218,13 @@ h1, h2, h3{
 
 /* Certs */
 .certifications {
-    padding: 3rem 0;
+    padding: 3rem;
     text-align: center;
+}
+
+.certifications.container {
+    max-width: 100%;
+    padding: 3rem;
 }
 
 .certifications h2 {
@@ -215,4 +239,6 @@ h1, h2, h3{
     flex-wrap: wrap;
     gap: 2rem;
     min-height: 300px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
