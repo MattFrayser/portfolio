@@ -2,16 +2,16 @@ export default function ProjectsPreview() {
 
     const projects = [
     {
-        title: "• Codr",
+        title: "• Codr IDE",
         description: "Online code execution platform for multiple languages.",
         img: "/codr.png",
-        link: "https://codr-sandbox.vercel.app/"
+        link: "https://codr-ide.vercel.app"
     },
     {
         title: "• Collaborative Whiteboard",
         description: "Anonymous room room based whiteboard.",
         img: "/whiteboard.png",
-        link: "https://github.com/MattFrayser/whiteboard"
+        link: "https://whiteboardts.vercel.app/"
     },
     {
         title: "• Spotify Go API",
